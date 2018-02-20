@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // template literals - es6 
+        const name = 'John';
+        const age = 30;
+        const job = 'Web Developer';
+        const city = 'Miami';
+        let html;
+
+        // Without template strings (es5)
+        // you can put it all on one line or break it up
+        html = '<ul>' + 
+            '<li>Name: ' + name + '</li>' + 
+            '<li>Age: ' + age + '</li>' + 
+            '<li>Job: ' + job + '</li>' +
+            '<li>City: ' + city + '</li>' + 
+            '</ul>';
+
+        document.body.innerHTML = html;
+
+        function hello() {
+            return 'hello world';
+        }
+
+
+        //  With template strings (es6)
+        html = `
+        <ul>
+            <li>Name: ${name}</li>  
+            <li>Age: ${age}</li>  
+            <li>Job: ${job}</li> 
+            <li>City: ${city}</li>  
+            <li> ${2 + 2}</li>
+            <li> ${hello()}</li>
+            <li> ${age > 30 ? 'You are old' : 'You are young'}</li>
+        </ul>
+        `;
+        // this is a ternary operator!! ${age > 30 ? 'You are old' : 'You are young'}
+        document.body.innerHTML = html;
+
+    </script>
+</body>
+</html>

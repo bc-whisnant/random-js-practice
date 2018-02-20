@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // string methods
+        const firstName = 'William';
+        const lastName = 'Johnson';  
+        const age = 28;
+        const str = 'Hello there my name is Brandon';
+        const str2 = 'web design, web development, ios development, javascript, python';
+
+        let val = firstName + lastName;
+
+        // Concatentation
+        val = firstName + ' ' + lastName;
+
+        // Appending - += appends
+        val = 'Brandon ';
+        val += 'Whisnant';
+
+        val = 'Hello, my name is ' + firstName + ' and I am ' + age;
+
+        // Escaping - you can also use double quotes inside the single quotes
+        val = 'That\'s awesome, I can\'t wait';
+
+        // Length
+        val = firstName.length;
+
+        // Concat - this is pretty awesome
+        val = firstName.concat(' ', lastName);
+
+        // toUpperCase and toLowerCase
+        val = firstName.toUpperCase();
+        val = firstName.toLowerCase();
+
+        // Treating string like array - this isn't too useful but can be done
+        val = firstName[0];
+
+        // indexOf()
+        val = firstName.indexOf('l');
+
+        val = firstName.lastIndexOf('l');
+
+        // charAt()
+        val = firstName.charAt('2');
+
+        // get last character
+        val = firstName.charAt(firstName.length - 1);
+
+        // get substring
+        val = firstName.substring(0,4);
+
+        // slice - very similar to substring - commonly used on arrays
+        val = firstName.slice(0,4);
+        // starts from the back and takes three characters
+        val = firstName.slice(-3);
+
+        // split - splits string into array based on seperator
+        // this would be good for a form using comma seperated tags
+        // example: web design, web development, programming
+        val = str.split(' ');
+        // notice this str2 variable is split at the comma instead of a space
+        val = str2.split(',');
+
+        // replace
+        val = str.replace('Brandon', 'Greggums');
+
+        // includes - gives true or false based on if something is in string
+        // this is case sensitive - example: 'hello' would return false
+        val = str.includes('Hello');
+
+        document.write(val);
+
+    </script>
+</body>
+</html>
